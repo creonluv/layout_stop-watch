@@ -1,0 +1,74 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.watch {
+  box-sizing: border-box;
+  z-index: 0;
+  border: 8px dotted #000;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  width: 80vmin;
+  height: 80vmin;
+  display: flex;
+  position: relative;
+}
+
+.watch__circule {
+  z-index: 3;
+  background-color: #000;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  width: 5vmin;
+  height: 5vmin;
+  display: flex;
+  position: absolute;
+}
+
+.watch__minute-hand {
+  z-index: 1;
+  transform-origin: bottom;
+  background-color: #f01;
+  border-radius: 15%;
+  width: 3vmin;
+  height: 25%;
+  animation: 60s linear 1s infinite rotate-animation;
+  position: absolute;
+  top: 20vmin;
+}
+
+.watch__second-hand {
+  z-index: 2;
+  transform-origin: bottom;
+  background-color: #006eff;
+  border-radius: 15%;
+  width: 2vmin;
+  height: 50%;
+  animation: 5s linear 1s infinite rotate-animation;
+  position: absolute;
+  top: 0;
+}
+
+@keyframes rotate-animation {
+  from {
+    transform: rotate(0);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/*# sourceMappingURL=index.971c2ea4.css.map */
